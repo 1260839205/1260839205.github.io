@@ -150,19 +150,99 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-two" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-20200710" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/06/two/">如何用centos7搭建一个个人博客（全网最细）</a>
+      <a class="article-title" href="/2020/07/10/20200710/">解决Java无法运行 控制台乱码问题</a>
     </h1>
   
 
         
-        <a href="/2020/07/06/two/" class="archive-article-date">
+        <a href="/2020/07/10/20200710/" class="archive-article-date">
+  	<time datetime="2020-07-10T10:30:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="控制台输入java不显示，输入javac编码混乱"><a href="#控制台输入java不显示，输入javac编码混乱" class="headerlink" title="控制台输入java不显示，输入javac编码混乱"></a>控制台输入java不显示，输入javac编码混乱</h3><ul>
+<li>输入java不显示，输入javac编码混乱<br><img src="/2020/07/10/20200710/img/1.png" alt="示例" title="示例1"></li>
+</ul>
+<h4 id="解决办法1："><a href="#解决办法1：" class="headerlink" title="解决办法1："></a>解决办法1：</h4><ol>
+<li>以管理员方式打开控制台(cmd),输入chcp查看当前系统编码</li>
+<li>发现是65001也就是UTF-8编码<br><img src="/2020/07/10/20200710/img/2.png" alt="示例" title="示例2"></li>
+<li>我们在控制台输入chcp936，将编码切换成GBK编码<br><img src="/2020/07/10/20200710/img/3.png" alt="示例" title="示例3"></li>
+<li>更改编码成功，输入java，javac测试显示如下：<br><img src="/2020/07/10/20200710/img/4.png" alt="示例" title="示例4"></li>
+</ol>
+<h4 id="解决办法2："><a href="#解决办法2：" class="headerlink" title="解决办法2："></a>解决办法2：</h4><ol>
+<li>修改注册表文件win + r 打开运行输入regedit进入注册表</li>
+<li>找到HKEY_CURRENT_USER\Console%SystemRoot%_system32_cmd.exe 新建一个 DWORD（32位值）,命名为CodePage，值设为936 已有CodePage的话，修改它，改为十进制，936</li>
+</ol>
+<h4 id="附加（常用的几种编码）："><a href="#附加（常用的几种编码）：" class="headerlink" title="附加（常用的几种编码）："></a>附加（常用的几种编码）：</h4><ul>
+<li>437（英语）</li>
+<li>65001（utf-8）</li>
+<li>936（GBK）</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/10/20200710/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-20200706" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/06/20200706/">如何用centos7搭建一个个人博客（全网最细）</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/06/20200706/" class="archive-article-date">
   	<time datetime="2020-07-06T13:37:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-06</time>
 </a>
         
@@ -184,7 +264,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/06/two/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/07/06/20200706/">展开全文 >></a>
         </p>
       
 

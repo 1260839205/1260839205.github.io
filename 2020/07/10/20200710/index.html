@@ -6,17 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Code Fruit</title>
+  <title>解决Java无法运行 控制台乱码问题 | Code Fruit</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="程序果,Code,Fruit,Code Fruit,Java,java">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Code Fruit">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="控制台输入java不显示，输入javac编码混乱 输入java不显示，输入javac编码混乱  解决办法1： 以管理员方式打开控制台(cmd),输入chcp查看当前系统编码 发现是65001也就是UTF-8编码 我们在控制台输入chcp936，将编码切换成GBK编码 更改编码成功，输入java，javac测试显示如下：  解决办法2： 修改注册表文件win + r 打开运行输入regedit进入注">
+<meta property="og:type" content="article">
+<meta property="og:title" content="解决Java无法运行 控制台乱码问题">
+<meta property="og:url" content="http://yoursite.com/2020/07/10/20200710/index.html">
 <meta property="og:site_name" content="Code Fruit">
-<meta property="og:description" content="程序果,Code,Fruit,Code Fruit,Java,java">
+<meta property="og:description" content="控制台输入java不显示，输入javac编码混乱 输入java不显示，输入javac编码混乱  解决办法1： 以管理员方式打开控制台(cmd),输入chcp查看当前系统编码 发现是65001也就是UTF-8编码 我们在控制台输入chcp936，将编码切换成GBK编码 更改编码成功，输入java，javac测试显示如下：  解决办法2： 修改注册表文件win + r 打开运行输入regedit进入注">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/2020/07/10/20200710/img/1.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/10/20200710/img/2.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/10/20200710/img/3.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/10/20200710/img/4.png">
+<meta property="article:published_time" content="2020-07-10T10:30:42.000Z">
+<meta property="article:modified_time" content="2020-07-10T11:14:03.769Z">
 <meta property="article:author" content="Code Fruit">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/07/10/20200710/img/1.png">
   
     <link rel="alternative" href="/atom.xml" title="Code Fruit" type="application/atom+xml">
   
@@ -148,76 +155,193 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-20200710" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      解决Java无法运行 控制台乱码问题
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/10/20200710/" class="archive-article-date">
+
+        
+        <a href="/2020/07/10/20200710/" class="archive-article-date">
   	<time datetime="2020-07-10T10:30:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-10</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/10/20200710/">解决Java无法运行 控制台乱码问题</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="控制台输入java不显示，输入javac编码混乱"><a href="#控制台输入java不显示，输入javac编码混乱" class="headerlink" title="控制台输入java不显示，输入javac编码混乱"></a>控制台输入java不显示，输入javac编码混乱</h3><ul>
+<li>输入java不显示，输入javac编码混乱<br><img src="/2020/07/10/20200710/img/1.png" alt="示例" title="示例1"></li>
+</ul>
+<h4 id="解决办法1："><a href="#解决办法1：" class="headerlink" title="解决办法1："></a>解决办法1：</h4><ol>
+<li>以管理员方式打开控制台(cmd),输入chcp查看当前系统编码</li>
+<li>发现是65001也就是UTF-8编码<br><img src="/2020/07/10/20200710/img/2.png" alt="示例" title="示例2"></li>
+<li>我们在控制台输入chcp936，将编码切换成GBK编码<br><img src="/2020/07/10/20200710/img/3.png" alt="示例" title="示例3"></li>
+<li>更改编码成功，输入java，javac测试显示如下：<br><img src="/2020/07/10/20200710/img/4.png" alt="示例" title="示例4"></li>
+</ol>
+<h4 id="解决办法2："><a href="#解决办法2：" class="headerlink" title="解决办法2："></a>解决办法2：</h4><ol>
+<li>修改注册表文件win + r 打开运行输入regedit进入注册表</li>
+<li>找到HKEY_CURRENT_USER\Console%SystemRoot%_system32_cmd.exe 新建一个 DWORD（32位值）,命名为CodePage，值设为936 已有CodePage的话，修改它，改为十进制，936</li>
+</ol>
+<h4 id="附加（常用的几种编码）："><a href="#附加（常用的几种编码）：" class="headerlink" title="附加（常用的几种编码）："></a>附加（常用的几种编码）：</h4><ul>
+<li>437（英语）</li>
+<li>65001（utf-8）</li>
+<li>936（GBK）</li>
+</ul>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/10/20200710/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/06/20200706/" class="archive-article-date">
-  	<time datetime="2020-07-06T13:37:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-06</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/06/20200706/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如何用centos7搭建一个个人博客（全网最细）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/06/20200706/">如何用centos7搭建一个个人博客（全网最细）</a>
-    </h1>
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="20200710" data-title="解决Java无法运行 控制台乱码问题" data-url="http://yoursite.com/2020/07/10/20200710/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -240,8 +364,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
