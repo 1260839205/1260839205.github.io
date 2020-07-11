@@ -8,17 +8,35 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>如何用centos7搭建一个个人博客（全网最细） | Code Fruit</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、准备工作* 一台电脑或者服务器 * 安装好VMware Workstation Pro  * 准备一个centos7或者7以上的镜像(Redhat也可以)二、在虚拟机上安装centos7的操作系统*这里直接百度一下就可以三、开始部署">
+  <meta name="description" content="一、准备工作 一台电脑或者服务器 安装好VMware Workstation Pro  准备一个centos7或者7以上的镜像(Redhat也可以)  二、在虚拟机上安装centos7的操作系统#VMware Workstation Pro 上安装centos7教程，访问如下地址 https:&#x2F;&#x2F;jingyan.baidu.com&#x2F;article&#x2F;0320e2c1bab9b95b87507b95.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何用centos7搭建一个个人博客（全网最细）">
 <meta property="og:url" content="http://yoursite.com/2020/07/06/20200706/index.html">
 <meta property="og:site_name" content="Code Fruit">
-<meta property="og:description" content="一、准备工作* 一台电脑或者服务器 * 安装好VMware Workstation Pro  * 准备一个centos7或者7以上的镜像(Redhat也可以)二、在虚拟机上安装centos7的操作系统*这里直接百度一下就可以三、开始部署">
+<meta property="og:description" content="一、准备工作 一台电脑或者服务器 安装好VMware Workstation Pro  准备一个centos7或者7以上的镜像(Redhat也可以)  二、在虚拟机上安装centos7的操作系统#VMware Workstation Pro 上安装centos7教程，访问如下地址 https:&#x2F;&#x2F;jingyan.baidu.com&#x2F;article&#x2F;0320e2c1bab9b95b87507b95.">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/img/20200706/git.png">
+<meta property="og:image" content="http://yoursite.com/img/20200706/git-version.png">
+<meta property="og:image" content="http://yoursite.com/img/20200706/gitlogin.png">
+<meta property="og:image" content="http://yoursite.com/img/20200706/Repository-git.png">
+<meta property="og:image" content="http://yoursite.com/img/20200706/sshkey.png">
+<meta property="og:image" content="http://yoursite.com/img/20200706/sshkey-code.png">
+<meta property="og:image" content="http://yoursite.com/img/20200706/nodejs-v.png">
+<meta property="og:image" content="http://yoursite.com/img/20200706/n.png">
+<meta property="og:image" content="http://yoursite.com/img/20200706/hexo.png">
+<meta property="og:image" content="http://yoursite.com/img/20200706/hexo-v.png">
+<meta property="og:image" content="http://yoursite.com/img/20200706/hexoinit.png">
+<meta property="og:image" content="http://yoursite.com/img/20200706/npm.png">
+<meta property="og:image" content="http://yoursite.com/img/20200706/Repository-git2.png">
+<meta property="og:image" content="http://yoursite.com/img/20200706/_config.png">
+<meta property="og:image" content="http://yoursite.com/img/20200706/id.png">
+<meta property="og:image" content="http://yoursite.com/img/20200706/hello.png">
+<meta property="og:image" content="http://yoursite.com/img/20200706/hellogit.png">
 <meta property="article:published_time" content="2020-07-06T13:37:00.000Z">
-<meta property="article:modified_time" content="2020-07-07T04:09:08.000Z">
+<meta property="article:modified_time" content="2020-07-11T13:54:23.663Z">
 <meta property="article:author" content="Code Fruit">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/img/20200706/git.png">
   
     <link rel="alternative" href="/atom.xml" title="Code Fruit" type="application/atom+xml">
   
@@ -165,14 +183,113 @@
         <a href="/2020/07/06/20200706/" class="archive-article-date">
   	<time datetime="2020-07-06T13:37:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-06</time>
 </a>
+
         
+	
+	
+          <span class="archive-article-date">
+           阅读量 <span id="busuanzi_value_page_pv"></span>
+         </span>
+       
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h2><pre><code>* 一台电脑或者服务器
-* 安装好VMware Workstation Pro 
-* 准备一个centos7或者7以上的镜像(Redhat也可以)</code></pre><h2 id="二、在虚拟机上安装centos7的操作系统"><a href="#二、在虚拟机上安装centos7的操作系统" class="headerlink" title="二、在虚拟机上安装centos7的操作系统"></a>二、在虚拟机上安装centos7的操作系统</h2><pre><code>*这里直接百度一下就可以</code></pre><h2 id="三、开始部署"><a href="#三、开始部署" class="headerlink" title="三、开始部署"></a>三、开始部署</h2>
+        <h3 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h3><ul>
+<li>一台电脑或者服务器</li>
+<li>安装好VMware Workstation Pro </li>
+<li>准备一个centos7或者7以上的镜像(Redhat也可以)</li>
+</ul>
+<h3 id="二、在虚拟机上安装centos7的操作系统"><a href="#二、在虚拟机上安装centos7的操作系统" class="headerlink" title="二、在虚拟机上安装centos7的操作系统"></a>二、在虚拟机上安装centos7的操作系统</h3><pre>#VMware Workstation Pro 上安装centos7教程，访问如下地址
+https://jingyan.baidu.com/article/0320e2c1bab9b95b87507b95.html</pre>
+<a id="more"></a>
+
+<h3 id="三、开始部署"><a href="#三、开始部署" class="headerlink" title="三、开始部署"></a>三、开始部署</h3><ol>
+<li>用root身份登陆centos7系统，打开终端</li>
+<li>安装Git与配置<ul>
+<li>开始安装，安装途中全部Y（确定）<pre>yum install git-core</pre>
+<img src="/img/20200706/git.png" alt="git"></li>
+<li>查询Git版本，确保安装成功<pre>git --version</pre>
+<img src="/img/20200706/git-version.png" alt="gitv"></li>
+<li>设置用户名和邮箱（如果没有自行去GitHub注册）<pre>git config --global user.name "此处填用户名"
+git config --global user user.eamil "此处填自己邮箱"</pre>
+<img src="/img/20200706/gitlogin.png" alt="gitlogin"></li>
+<li>在GitHub上新建一个库，如下图所示，名称必须是用户名.github.io<br><img src="/img/20200706/Repository-git.png" alt="Repository"></li>
+<li>新建一个ssh key,这里一直敲回车直到结束<pre> ssh-keygen -t rsa -C "自己的邮箱"</pre>
+<img src="/img/20200706/sshkey.png" alt="key"></li>
+<li>查看所创建的密钥，输入如下代码<pre>cat ~/.ssh/id_rsa.pub
+#打开如下网址，导入密钥
+https://github.com/settings/keys
+</pre>
+<img src="/img/20200706/sshkey-code.png" alt="sshkey"> </li>
+</ul>
+</li>
+<li>安装Nodejs<ul>
+<li>使用EPEL安装<pre>#首先确认是否安装了epel-release包
+yum info epel-release
+#如果没提示安装，则执行以下代码安装
+yum install epel-release</pre></li>
+<li>输入以下代码下载<pre>yum install nodejs</pre>    </li>
+<li>查看版本<pre>node -v
+npm -v</pre>
+<img src="/img/20200706/nodejs-v.png" alt="node"> </li>
+<li>nodejs版本升级<pre>#安装n
+npm install -g n</pre> 
+<img src="/img/20200706/n.png" alt="n"> </li>
+<li>升级版本或安装指定版本<pre>#安装最新版本
+n latest
+#安装指定版本（我这里安装的是10.20.1）
+n 10.20.1
+</pre>
+![nodejs 10.20.1](/img/20200706/nodejs 10.20.1.png)</li>
+<li>切换nodejs版本,使用上下键来更改版本(切换之后重启一下)<pre>#切换版本
+n
+#重启系统
+reboot
+#重启之后查看nodejs版本
+node -v
+</pre>
+![nodejs 10.20.1](/img/20200706/node yes 10.20.1.png)</li>
+<li>安装Hexo博客框架<pre>npm install -g hexo-cli</pre>
+<img src="/img/20200706/hexo.png" alt="hexo"></li>
+<li>查看hexo版本，如显示以下内容则表示安装成功<br><img src="/img/20200706/hexo-v.png" alt="hexo-v"></li>
+<li>新建一个目录来存放博客文件，并且切换到新建的目录，初始化hexo，并且安装包，以及，并且安装git插件<pre>#初始化hexo
+hexo init
+#安装包
+npm install
+#安装git插件
+npm install hexo-deployer-git --save
+</pre>
+<img src="/img/20200706/hexoinit.png" alt="hexoinit"><br><img src="/img/20200706/npm.png" alt="hexoinit"></li>
+<li>打开当前目录下的_config.yml文件<pre>vim config.yml
+#并且更改最后面的配置为如下，保存后退出
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+type: git
+repository: https://github.com/********/********.github.io.git #此处为github你最开始建库，库的所在地址，如下图
+branch: master
+</pre>
+<img src="/img/20200706/Repository-git2.png" alt="hexoinit"><br><img src="/img/20200706/_config.png" alt="hexoinit"></li>
+<li>接着输入如下代码<pre>#清除缓存文件
+hexo clean
+#生成静态文件
+hexo generate
+#启动服务器
+hexo server  
+</pre>
+![hexoc](/img/20200706/hexo c+g.png)</li>
+<li>查询本地ip后,打开浏览器输入ip地址:4000，如图<br><img src="/img/20200706/id.png" alt="ip"><br><img src="/img/20200706/hello.png" alt="hello"></li>
+<li>如果刚刚没打开，可能是防火墙没有关<pre>#关闭防火墙
+systemctl stop firewalld.service
+#关闭防火墙开机自启
+systemctl disable firewalld.service </pre></li>
+<li>部署到github上<pre>hexo deploy</pre></li>
+<li>浏览器使用github仓库的地址访问如：用户名.github.io，自此博客搭建成功<br><img src="/img/20200706/hellogit.png" alt="hello"></li>
+</ul>
+</li>
+</ol>
+
       
 
       
@@ -340,7 +457,7 @@ if(true){
   	clientSecret: 'd4bb934525051e1b736c4f125810be9c23a6990a',
   	repo: '1260839205.github.io',
   	owner: '1260839205',
-  	admin: ['Code Fruit'],
+  	admin: ['1260839205'],
   	id: 'Mon Jul 06 2020 21:37:00 GMT+0800',
   	distractionFreeMode: 'true'
 })
@@ -360,11 +477,21 @@ gitalk.render('gitalk-container')
     		&copy; 2020 Code Fruit
     	</div>
       	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
+             <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      		<span id="busuanzi_container_site_pv">
+                本站总访问量：<span id="busuanzi_value_site_pv"></span>次
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span id="busuanzi_container_site_uv">
+                本站访客数：<span id="busuanzi_value_site_uv"></span>人
+            </span>
+	</div>
     </div>
   </div>
 </footer>
+<!--页面点击小红心-->
+<script type="text/javascript" src="/love.js"></script>
+
     </div>
     <script>
 	var yiliaConfig = {
