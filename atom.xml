@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Code Fruit</title>
+  
+  <subtitle>一个爱鼓捣的程序果</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2020-07-10T13:05:10.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Code Fruit</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决Java无法运行 控制台乱码问题</title>
+    <link href="http://yoursite.com/2020/07/10/20200710/"/>
+    <id>http://yoursite.com/2020/07/10/20200710/</id>
+    <published>2020-07-10T10:30:42.000Z</published>
+    <updated>2020-07-10T13:05:10.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="控制台输入java不显示，输入javac编码混乱"><a href="#控制台输入java不显示，输入javac编码混乱" class="headerlink" title="控制台输入java不显示，输入javac编码混乱"></a>控制台输入java不显示，输入javac编码混乱</h3><ul><li>输入java不显示，输入javac编码混乱<br><img src="/img/20200710/1.png" alt="示例" title="示例1"></li></ul><a id="more"></a><h4 id="解决办法1："><a href="#解决办法1：" class="headerlink" title="解决办法1："></a>解决办法1：</h4><ol><li>以管理员方式打开控制台(cmd),输入chcp查看当前系统编码</li><li>发现是65001也就是UTF-8编码<br><img src="/img/20200710/2.png" alt="示例" title="示例2"></li><li>我们在控制台输入chcp936，将编码切换成GBK编码<br><img src="/img/20200710/3.png" alt="示例" title="示例3"></li><li>更改编码成功，输入java，javac测试显示如下：<br><img src="/img/20200710/4.png" alt="示例" title="示例4"></li></ol><h4 id="解决办法2："><a href="#解决办法2：" class="headerlink" title="解决办法2："></a>解决办法2：</h4><ol><li>修改注册表文件win + r 打开运行输入regedit进入注册表</li><li>找到HKEY_CURRENT_USER\Console%SystemRoot%_system32_cmd.exe 新建一个 DWORD（32位值）,命名为CodePage，值设为936 已有CodePage的话，修改它，改为十进制，936</li></ol><h4 id="附加（常用的几种编码）："><a href="#附加（常用的几种编码）：" class="headerlink" title="附加（常用的几种编码）："></a>附加（常用的几种编码）：</h4><ul><li>437（英语）</li><li>65001（utf-8）</li><li>936（GBK）</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;控制台输入java不显示，输入javac编码混乱&quot;&gt;&lt;a href=&quot;#控制台输入java不显示，输入javac编码混乱&quot; class=&quot;headerlink&quot; title=&quot;控制台输入java不显示，输入javac编码混乱&quot;&gt;&lt;/a&gt;控制台输入java不显示，输入javac编码混乱&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;输入java不显示，输入javac编码混乱&lt;br&gt;&lt;img src=&quot;/img/20200710/1.png&quot; alt=&quot;示例&quot; title=&quot;示例1&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>如何用centos7搭建一个个人博客（全网最细）</title>
+    <link href="http://yoursite.com/2020/07/06/20200706/"/>
+    <id>http://yoursite.com/2020/07/06/20200706/</id>
+    <published>2020-07-06T13:37:00.000Z</published>
+    <updated>2020-07-12T07:18:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h3><ul><li>一台电脑或者服务器</li><li>安装好VMware Workstation Pro </li><li>准备一个centos7或者7以上的镜像(Redhat也可以)</li></ul><a id="more"></a>             <h3 id="二、在虚拟机上安装centos7的操作系统-服务器可省略此步骤"><a href="#二、在虚拟机上安装centos7的操作系统-服务器可省略此步骤" class="headerlink" title="二、在虚拟机上安装centos7的操作系统(服务器可省略此步骤)"></a>二、在虚拟机上安装centos7的操作系统(服务器可省略此步骤)</h3><pre>#VMware Workstation Pro 上安装centos7教程，访问如下地址https://jingyan.baidu.com/article/0320e2c1bab9b95b87507b95.html</pre><h3 id="三、开始部署"><a href="#三、开始部署" class="headerlink" title="三、开始部署"></a>三、开始部署</h3><ol><li>用root身份登陆centos7系统，打开终端</li><li>安装Git与配置<ul><li>开始安装，安装途中全部Y（确定）<br><pre>yum install git-core</pre><br><img src="/img/20200706/git.png" alt=""></li><li>查询Git版本，确保安装成功<br><pre>git –version</pre><br><img src="/img/20200706/git-version.png" alt=""></li><li>设置用户名和邮箱（如果没有自行去GitHub注册）<br><pre>git config –global user.name “此处填用户名”<br>git config –global user user.eamil “此处填自己邮箱”</pre><br><img src="/img/20200706/gitlogin.png" alt=""></li><li>在GitHub上新建一个库，如下图所示，名称必须是用户名.github.io<br><img src="/img/20200706/Repository-git.png" alt=""></li><li>新建一个ssh key,这里一直敲回车直到结束<br><pre> ssh-keygen -t rsa -C “自己的邮箱”</pre><br><img src="/img/20200706/sshkey.png" alt=""></li><li>查看所创建的密钥，输入如下代码<br><pre>cat ~/.ssh/id_rsa.pub<br>#打开如下网址，导入密钥<br><a href="https://github.com/settings/keys" target="_blank" rel="noopener">https://github.com/settings/keys</a><br></pre><br><img src="/img/20200706/sshkey-code.png" alt=""> </li></ul></li><li>安装Nodejs<ul><li>使用EPEL安装<pre>#首先确认是否安装了epel-release包yum info epel-release#如果没提示安装，则执行以下代码安装yum install epel-release</pre></li><li>输入以下代码下载<pre>yum install nodejs</pre>    </li><li>查看版本<br><pre>node -v<br>npm -v</pre><br><img src="/img/20200706/nodejs-v.png" alt=""> </li><li>nodejs版本升级<br><pre>#安装n<br>npm install -g n</pre><br><img src="/img/20200706/n.png" alt=""> </li><li>升级版本或安装指定版本<br><pre>#安装最新版本<br>n latest<br>#安装指定版本（我这里安装的是10.20.1）<br>n 10.20.1<br></pre><br><img src="/img/20200706/nodejs1.png" alt=""></li><li>切换nodejs版本,使用上下键来更改版本(切换之后重启一下)<br><pre>#切换版本<br>n<br>#重启系统<br>reboot<br>#重启之后查看nodejs版本<br>node -v<br></pre><br><img src="/img/20200706/node1.png" alt=""></li><li>安装Hexo博客框架<br><pre>npm install -g hexo-cli</pre><br><img src="/img/20200706/hexo.png" alt=""></li><li>查看hexo版本，如显示以下内容则表示安装成功<br><img src="/img/20200706/hexo-v.png" alt=""></li><li>新建一个目录来存放博客文件，并且切换到新建的目录，初始化hexo，并且安装包，以及，并且安装git插件<br><pre>#初始化hexo<br>hexo init<br>#安装包<br>npm install<br>#安装git插件<br>npm install hexo-deployer-git –save<br></pre><br><img src="/img/20200706/hexoinit.png" alt=""><br><img src="/img/20200706/npm-git.png" alt=""></li><li>打开当前目录下的_config.yml文件<br><pre>vim config.yml<br>#并且更改最后面的配置为如下，保存后退出<h1 id="Deployment"><a href="#Deployment" class="headerlink" title="Deployment"></a>Deployment</h1><h1 id="Docs-https-hexo-io-docs-deployment-html"><a href="#Docs-https-hexo-io-docs-deployment-html" class="headerlink" title="Docs: https://hexo.io/docs/deployment.html"></a>Docs: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">https://hexo.io/docs/deployment.html</a></h1>deploy:<br>type: git<br>repository: <a href="https://github.com/********/********.github.io.git" target="_blank" rel="noopener">https://github.com/********/********.github.io.git</a> #此处为github你最开始建库，库的所在地址，如下图<br>branch: master<br></pre><br><img src="/img/20200706/Repository-git2.png" alt=""><br><img src="/img/20200706/config.png" alt=""></li><li>接着输入如下代码<br><pre>#清除缓存文件<br>hexo clean<br>#生成静态文件<br>hexo generate<br>#启动服务器<br>hexo server<br></pre><br><img src="/img/20200706/hexoc.png" alt=""></li><li>查询本地ip后,打开浏览器输入ip地址:4000，如图<br><img src="/img/20200706/id.png" alt=""><br><img src="/img/20200706/hello.png" alt=""></li><li>如果刚刚没打开，可能是防火墙没有关<pre>#关闭防火墙systemctl stop firewalld.service#关闭防火墙开机自启systemctl disable firewalld.service </pre></li><li>部署到github上<pre>hexo deploy</pre></li><li>浏览器使用github仓库的地址访问如：用户名.github.io，自此博客搭建成功<br><img src="/img/20200706/hellogit.png" alt=""></li></ul></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;一、准备工作&quot;&gt;&lt;a href=&quot;#一、准备工作&quot; class=&quot;headerlink&quot; title=&quot;一、准备工作&quot;&gt;&lt;/a&gt;一、准备工作&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;一台电脑或者服务器&lt;/li&gt;
+&lt;li&gt;安装好VMware Workstation Pro &lt;/li&gt;
+&lt;li&gt;准备一个centos7或者7以上的镜像(Redhat也可以)&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
